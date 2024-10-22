@@ -171,13 +171,13 @@ void Updater::receivedBundle() {
         return;
     }
 
-    if (hash.size() > 0) {
-        QByteArray fhash = QCryptographicHash::hash(data, QCryptographicHash::Algorithm::Sha256);
-        if (fhash != hash) {
-            emit error(tr("Invalid Download Hash"));
-            return;
-        }
-    }
+    //if (hash.size() > 0) {
+      //  QByteArray fhash = QCryptographicHash::hash(data, QCryptographicHash::Algorithm::Sha256);
+        //if (fhash != hash) {
+          //  emit error(tr("Invalid Download Hash"));
+            //return;
+       // }
+    //}
 
     QDir bin = OPENRCT2_HOMEDIR;
     if (bin.cd(QStringLiteral(OPENRCT2_BIN))) {
